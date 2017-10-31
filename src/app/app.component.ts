@@ -3,8 +3,13 @@ import { Nav, Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
-import { HomePage } from '../pages/home/home';
-import { ListPage } from '../pages/list/list';
+ 
+import { IndexPage } from '../pages/index';
+import { InlistPage } from '../pages/inlist/inlist';
+import { OutlistPage } from '../pages/outlist/outlist';
+import { ProductPage } from '../pages/product/product';
+ 
+
 
 @Component({
   templateUrl: 'app.html'
@@ -12,7 +17,7 @@ import { ListPage } from '../pages/list/list';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = HomePage;
+  rootPage: any = IndexPage;
 
   pages: Array<{title: string, component: any}>;
 
@@ -21,8 +26,10 @@ export class MyApp {
 
     // used for an example of ngFor and navigation
     this.pages = [
-      { title: 'Home', component: HomePage },
-      { title: 'List', component: ListPage }
+      { title: '我的库存', component: IndexPage },
+      { title: '入货列表', component: InlistPage },
+      { title: '出货列表', component: OutlistPage },
+      { title: '添加商品', component: ProductPage },
     ];
 
   }
