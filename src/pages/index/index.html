@@ -8,5 +8,44 @@
 </ion-header>
 
 <ion-content padding>
+  <ion-grid>
+    <ion-row>
+      <ion-col style=" border-left: 1px solid black;">全选</ion-col>
+      <ion-col>Name2</ion-col>
+      <ion-col>Name3</ion-col>
+      <ion-col>Name4</ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col style=" border-left: 1px solid black;">Name1</ion-col>
+      <ion-col>Name2</ion-col>
+      <ion-col>Name3</ion-col>
+      <ion-col>
+        <ion-list>
+          <ion-item-sliding >
+            <ion-item>
+              Item
+            </ion-item>
+            <ion-item-options side="right">
+              <button ion-button (click)="favorite(item)">Favorite</button>
+              <button ion-button color="danger" (click)="share(item)">Share</button>
+            </ion-item-options>
+        
+          </ion-item-sliding>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 
+  <ion-list>
+    <ion-item-sliding #item>
+      <ion-item>
+        Item
+      </ion-item>
+      <ion-item-options side="right">
+        <button ion-button (click)="favorite(item)">Favorite</button>
+        <button ion-button color="danger" (click)="share(item)">Share</button>
+      </ion-item-options>
+  
+    </ion-item-sliding>
+  </ion-list>
 </ion-content>
